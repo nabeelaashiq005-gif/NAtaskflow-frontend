@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useForm } from "react-hook-form";
@@ -10,7 +10,15 @@ import PasswordInput from "@/components/ui/PasswordInput";
 import Button from "@/components/ui/Button";
 import GoogleButton from "@/components/auth/GoogleButton";
 
-export default function LoginForm() {
+export default function LoginPage() {
+  return (
+    <Suspense fallback={null}>
+      <LoginForm />
+    </Suspense>
+  );
+}
+
+function LoginForm() {
   const { login } = useAuth();
   const searchParams = useSearchParams();
   const resetSuccess = searchParams.get("reset") === "success";

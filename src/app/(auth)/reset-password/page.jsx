@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useForm } from "react-hook-form";
@@ -10,6 +10,14 @@ import PasswordInput from "@/components/ui/PasswordInput";
 import Button from "@/components/ui/Button";
 
 export default function ResetPasswordPage() {
+  return (
+    <Suspense fallback={null}>
+      <ResetPasswordForm />
+    </Suspense>
+  );
+}
+
+function ResetPasswordForm() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const presetEmail = searchParams.get("email") || "";
