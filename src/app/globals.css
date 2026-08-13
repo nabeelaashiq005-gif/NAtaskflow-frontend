@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-ink: 51 65 85;
+  --color-canvas: 237 231 219;
+  --color-brand: 61 90 128;
+  --color-brand-dark: 38 55 77;
+  --color-brand-light: 169 198 220;
+  --color-accent: 238 139 78;
+  --color-success: 63 138 95;
+  --color-warning: 192 138 46;
+}
+
+.dark {
+  --color-ink: 226 232 240;
+  --color-canvas: 15 23 42;
+  --color-brand: 94 123 163;
+  --color-brand-dark: 169 198 220;
+  --color-brand-light: 38 55 77;
+  --color-accent: 244 155 92;
+  --color-success: 81 163 112;
+  --color-warning: 206 152 64;
+}
+
+/* In dark mode keep solid dark surfaces (Sidebar, heroes, logo chips) dark,
+   and cards/panels dark too — while ink flips to a light text color. */
+.dark .bg-ink {
+  background-color: rgb(30 41 59);
+}
+.dark .bg-white {
+  background-color: rgb(30 41 59);
+}
+
+body {
+  @apply bg-canvas text-ink font-body antialiased;
+}
+
+::selection {
+  background-color: #3d5a80;
+  color: #ffffff;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgb(51 65 85 / 0.18);
+  border-radius: 9999px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(51 65 85 / 0.3);
+}
+
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: none;
+}
+
+@keyframes pageIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.page-enter {
+  animation: pageIn 0.28s ease-out;
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  60% {
+    transform: scale(1.04);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.success-pop {
+  animation: popIn 0.4s ease-out;
+}
