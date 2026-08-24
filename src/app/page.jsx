@@ -81,7 +81,7 @@ export default function LandingPage() {
             </Link>
             <Link
               href="/register"
-              className="rounded-lg bg-gradient-to-r from-brand to-accent px-4 py-2 text-sm font-medium text-white transition-opacity hover:opacity-90"
+              className="rounded-lg bg-brand px-4 py-2 text-sm font-medium text-white transition-opacity hover:opacity-90"
             >
               Get started free
             </Link>
@@ -118,7 +118,7 @@ export default function LandingPage() {
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3 lg:justify-start">
               <Link
                 href="/register"
-                className="rounded-lg bg-gradient-to-r from-brand to-accent px-6 py-3 font-medium text-white shadow-sm transition-opacity hover:opacity-90"
+                className="rounded-lg bg-brand px-6 py-3 font-medium text-white shadow-sm transition-opacity hover:opacity-90"
               >
                 Get started free
               </Link>
@@ -294,7 +294,7 @@ export default function LandingPage() {
           <p className="mt-3 text-white/60">Free to start. No credit card required.</p>
          <Link
   href="/register"
-  className="mt-8 inline-block rounded-lg bg-gradient-to-r from-brand to-accent px-7 py-3 font-medium text-white shadow-sm transition-opacity hover:opacity-90"
+  className="mt-8 inline-block rounded-lg bg-brand px-7 py-3 font-medium text-white shadow-sm transition-opacity hover:opacity-90"
 >
   Create your workspace
 </Link>

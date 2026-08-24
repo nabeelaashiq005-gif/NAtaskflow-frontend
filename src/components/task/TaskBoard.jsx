@@ -47,7 +47,7 @@ export default function TaskBoard({ workspaceId, projectId, projectMembers, work
         {canCreateTask && (
           <Link
             href={`/workspaces/${workspaceId}/projects/${projectId}/tasks/new`}
-            className="rounded-lg bg-gradient-to-r from-brand to-accent px-4 py-2 text-sm font-medium text-white transition-opacity hover:opacity-90"
+            className="rounded-lg bg-brand px-4 py-2 text-sm font-medium text-white transition-opacity hover:opacity-90"
           >
             + New task
           </Link>

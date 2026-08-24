@@ -23,7 +23,7 @@ function NavItem({ href, label, icon: Icon, isActive, badge }) {
       href={href}
       className={`group flex items-center gap-3 rounded-xl px-3.5 py-2.5 text-sm font-medium transition-colors ${
         isActive
-          ? "bg-gradient-to-r from-brand to-accent text-white"
+          ? "bg-brand text-white"
           : "text-white/60 hover:bg-white/5 hover:text-white"
       }`}
     >

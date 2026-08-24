@@ -34,7 +34,7 @@ export default function MobileBottomNav({ pendingCount, unreadNotifications }) {
               <span
                 className={`flex h-8 w-8 items-center justify-center rounded-full transition-colors ${
                   isActive
-                    ? "bg-gradient-to-r from-brand to-accent text-white"
+                    ? "bg-brand text-white"
                     : "text-ink/40"
                 }`}
               >

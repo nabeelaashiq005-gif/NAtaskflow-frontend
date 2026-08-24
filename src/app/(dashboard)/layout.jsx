@@ -42,7 +42,7 @@ export default function DashboardLayout({ children }) {
     return (
       <div className="flex min-h-screen items-center justify-center bg-canvas">
         <div className="flex flex-col items-center gap-3">
-          <span className="flex h-11 w-11 animate-pulse items-center justify-center rounded-xl bg-gradient-to-r from-brand to-accent text-lg font-bold text-white">
+          <span className="flex h-11 w-11 animate-pulse items-center justify-center rounded-xl bg-brand text-lg font-bold text-white">
             N
           </span>
           <p className="text-sm text-ink/40">Loading NATaskFlow...</p>

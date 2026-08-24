@@ -7,6 +7,7 @@ import { useParams, useRouter } from "next/navigation";
 import toast from "react-hot-toast";
 import api from "@/lib/axios";
 import { useAuth } from "@/context/AuthContext";
+import assetUrl from "@/lib/assetUrl";
 import Avatar from "@/components/ui/Avatar";
 import Skeleton from "@/components/ui/Skeleton";
 import PriorityBadge from "@/components/task/PriorityBadge";
@@ -19,11 +20,6 @@ const statusLabels = {
   in_progress: "In Progress",
   done: "Done",
 };
-
-const API_ORIGIN = (process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000/api/v1").replace(
-  "/api/v1",
-  ""
-);
 
 function formatDate(dateString) {
   if (!dateString) return null;
@@ -77,7 +73,7 @@ function SubmissionSection({ task, currentUserId, onSubmissionUploaded }) {
         <div className="flex items-center justify-between gap-3 rounded-xl bg-ink/[0.02] p-4">
           <div className="min-w-0">
             <a
-              href={`${API_ORIGIN}${submission.fileUrl}`}
+              href={assetUrl(submission.fileUrl)}
               target="_blank"
               rel="noopener noreferrer"
               className="truncate text-sm font-medium text-brand hover:underline"
@@ -108,7 +104,7 @@ function SubmissionSection({ task, currentUserId, onSubmissionUploaded }) {
           />
           <label
             htmlFor={`submission-input-${task._id}`}
-            className="inline-block cursor-pointer rounded-lg bg-gradient-to-r from-brand to-accent px-4 py-2 text-sm font-medium text-white transition-opacity hover:opacity-90"
+            className="inline-block cursor-pointer rounded-lg bg-brand px-4 py-2 text-sm font-medium text-white transition-opacity hover:opacity-90"
           >
             {isUploading
               ? "Uploading..."

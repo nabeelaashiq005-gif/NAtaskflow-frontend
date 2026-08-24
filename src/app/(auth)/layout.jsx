@@ -20,7 +20,7 @@ export default function AuthLayout({ children }) {
 
       {/* ---------- Form side ---------- */}
       <div className="relative flex flex-col justify-center bg-white px-6 py-20 sm:px-16 lg:px-24">
-        <div className="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-brand to-accent" />
+        <div className="absolute inset-x-0 top-0 h-1.5 bg-brand" />
 
         <div className="absolute top-12 left-6 sm:left-16 lg:left-24 text-xs font-medium text-ink/50">
           <Link href="/" className="hover:text-ink transition-colors">

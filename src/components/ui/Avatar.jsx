@@ -1,6 +1,4 @@
-const API_ORIGIN = (
-  process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000/api/v1"
-).replace(/\/api\/v1\/?$/, "");
+import assetUrl from "@/lib/assetUrl";
 
 function getInitials(name = "") {
   return name
@@ -13,9 +11,7 @@ function getInitials(name = "") {
 
 export default function Avatar({ name, src, size = 64 }) {
   const dimension = `${size}px`;
-  // The backend stores a relative path like "/uploads/avatars/xyz.jpg" —
-  // prefix it with the API's origin so the browser can actually load it.
-  const imageUrl = src ? `${API_ORIGIN}${src}` : null;
+  const imageUrl = assetUrl(src);
 
   if (imageUrl) {
     return (
@@ -32,7 +28,7 @@ export default function Avatar({ name, src, size = 64 }) {
   return (
     <div
       style={{ width: dimension, height: dimension }}
-      className="flex items-center justify-center rounded-full bg-gradient-to-r from-brand to-accent text-white font-medium"
+      className="flex items-center justify-center rounded-full bg-brand text-white font-medium"
     >
       {getInitials(name) || "?"}
     </div>
