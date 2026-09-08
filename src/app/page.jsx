@@ -67,21 +67,26 @@ export default function LandingPage() {
     <main className="min-h-screen bg-canvas">
       {/* ---------- Top nav ---------- */}
       <header className="bg-ink">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-          <Link href="/" className="flex items-center gap-2.5">
-            <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-white text-ink">
+        <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-4 sm:px-6">
+          <Link href="/" className="flex min-w-0 items-center gap-2.5">
+            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white text-ink">
               <FlowMark className="h-4.5 w-4.5" />
             </span>
-            <span className="font-display text-lg font-semibold text-white">NATaskFlow</span>
+            <span className="hidden truncate font-display text-lg font-semibold text-white min-[420px]:inline">
+              NATaskFlow
+            </span>
           </Link>
-          <div className="flex items-center gap-5">
+          <div className="flex items-center gap-3 sm:gap-5">
             <ThemeToggle inverse />
-            <Link href="/login" className="text-sm font-medium text-white/60 hover:text-white">
+            <Link
+              href="/login"
+              className="text-sm font-medium text-white/60 hover:text-white"
+            >
               Log in
             </Link>
             <Link
               href="/register"
-              className="rounded-lg bg-accent px-4 py-2 text-sm font-medium text-white transition-opacity hover:opacity-90"
+              className="whitespace-nowrap rounded-lg bg-accent px-3 py-1.5 text-[13px] font-medium text-white transition-opacity hover:opacity-90 sm:px-4 sm:py-2 sm:text-sm"
             >
               Get started free
             </Link>
