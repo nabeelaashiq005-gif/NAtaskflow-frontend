@@ -98,24 +98,26 @@ export default function LandingPage() {
       <div>
         <div className="mx-auto flex max-w-6xl flex-col items-center gap-16 px-6 py-24 lg:flex-row lg:items-center lg:py-28">
           <div className="flex-1 text-center lg:text-left">
-            <span className="font-body text-xs font-semibold uppercase tracking-[0.2em] text-ink/40">
+            <span className="font-body text-xs font-semibold uppercase tracking-[0.2em] text-ink/40 dark:text-ink/70">
               Plan · Assign · Ship
             </span>
             <h1 className="mt-4 font-display text-5xl font-semibold leading-[1.05] text-ink sm:text-6xl">
               Every task, filed where it belongs.
             </h1>
-            <p className="mx-auto mt-5 max-w-md text-lg text-ink/60 lg:mx-0">
+            <p className="mx-auto mt-5 max-w-md text-lg text-ink/60 dark:text-ink/85 lg:mx-0">
               NATaskFlow is the shared workspace for students, freelancers, and
               small teams — workspaces, projects, and a real Kanban board,
               without the bloat.
             </p>
 
             <div className="mx-auto mt-5 flex max-w-md flex-wrap items-center justify-center gap-x-2 gap-y-2 text-sm lg:mx-0 lg:justify-start">
-              <span className="font-medium text-ink/40">Built for</span>
+              <span className="font-medium text-ink/40 dark:text-ink/60">Built for</span>
               {audiences.map((a, i) => (
-                <span key={a} className="font-display font-medium text-ink/70">
+                <span key={a} className="font-display font-medium text-ink/70 dark:text-ink/85">
                   {a}
-                  {i < audiences.length - 1 && <span className="ml-2 text-ink/20">·</span>}
+                  {i < audiences.length - 1 && (
+                    <span className="ml-2 text-ink/20 dark:text-ink/40">·</span>
+                  )}
                 </span>
               ))}
             </div>
@@ -134,7 +136,7 @@ export default function LandingPage() {
                 Log in
               </Link>
             </div>
-            <p className="mt-4 text-xs text-ink/40">Free to start. No credit card required.</p>
+            <p className="mt-4 text-xs text-ink/40 dark:text-ink/60">Free to start. No credit card required.</p>
           </div>
 
           <div className="w-full max-w-2xl flex-1">
@@ -154,8 +156,8 @@ export default function LandingPage() {
         <div className="mx-auto grid max-w-6xl grid-cols-2 gap-x-6 gap-y-5 px-6 py-8 sm:grid-cols-4">
           {valueProps.map(({ icon: Icon, label }) => (
             <div key={label} className="flex items-center gap-2.5">
-              <Icon className="h-5 w-5 shrink-0 text-brand" />
-              <span className="text-sm font-medium text-ink/70">{label}</span>
+              <Icon className="h-5 w-5 shrink-0 text-brand dark:text-brand-light" />
+              <span className="text-sm font-medium text-ink/70 dark:text-ink/85">{label}</span>
             </div>
           ))}
         </div>
@@ -165,27 +167,27 @@ export default function LandingPage() {
       <section className="mx-auto max-w-6xl px-6 py-24">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
           <div>
-            <span className="font-body text-xs font-semibold uppercase tracking-[0.2em] text-brand">
+            <span className="font-body text-xs font-semibold uppercase tracking-[0.2em] text-brand dark:text-brand-light">
               Workspaces
             </span>
             <h2 className="mt-3 font-display text-3xl font-semibold text-ink sm:text-4xl">
               One workspace per team, as many projects as you need.
             </h2>
-            <p className="mt-4 max-w-md text-ink/60">
+            <p className="mt-4 max-w-md text-ink/60 dark:text-ink/85">
               Create a workspace for your team, invite people with a role
               that matches their responsibility, and organize the work into
               projects — nothing gets lost between chats and spreadsheets.
             </p>
           </div>
           <div className="rounded-2xl border border-ink/10 bg-white p-5 shadow-sm transition-transform duration-200 hover:-translate-y-1 hover:shadow-md">
-            <p className="text-xs font-medium uppercase tracking-wide text-ink/40">
+            <p className="text-xs font-medium uppercase tracking-wide text-ink/40 dark:text-ink/60">
               Acme Marketing Team
             </p>
             <div className="mt-3 grid grid-cols-2 gap-3">
               {["Website Redesign", "Q3 Campaign"].map((name) => (
                 <div key={name} className="rounded-xl border border-ink/10 p-3">
                   <p className="font-display text-sm font-medium text-ink">{name}</p>
-                  <p className="mt-1 text-xs text-ink/40">Active</p>
+                  <p className="mt-1 text-xs text-ink/40 dark:text-ink/60">Active</p>
                 </div>
               ))}
             </div>
@@ -204,7 +206,7 @@ export default function LandingPage() {
                 { label: "Done", items: [{ p: "low" }] },
               ].map((col) => (
                 <div key={col.label} className="rounded-lg bg-white p-2">
-                  <p className="mb-2 text-[10px] font-medium uppercase tracking-wide text-ink/40">
+                  <p className="mb-2 text-[10px] font-medium uppercase tracking-wide text-ink/40 dark:text-ink/60">
                     {col.label}
                   </p>
                   <div className="flex flex-col gap-1.5">
@@ -216,13 +218,13 @@ export default function LandingPage() {
               ))}
             </div>
             <div className="order-1 lg:order-2">
-              <span className="font-body text-xs font-semibold uppercase tracking-[0.2em] text-brand">
+              <span className="font-body text-xs font-semibold uppercase tracking-[0.2em] text-brand dark:text-brand-light">
                 Task management
               </span>
               <h2 className="mt-3 font-display text-3xl font-semibold text-ink sm:text-4xl">
                 A real Kanban board, not a to-do list pretending.
               </h2>
-              <p className="mt-4 max-w-md text-ink/60">
+              <p className="mt-4 max-w-md text-ink/60 dark:text-ink/85">
                 Owners and admins set priority, due dates, and assignees.
                 Assignees submit their finished work as a file — everyone
                 sees exactly where a task stands.
@@ -236,13 +238,13 @@ export default function LandingPage() {
       <section className="mx-auto max-w-6xl px-6 py-24">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
           <div>
-            <span className="font-body text-xs font-semibold uppercase tracking-[0.2em] text-brand">
+            <span className="font-body text-xs font-semibold uppercase tracking-[0.2em] text-brand dark:text-brand-light">
               Collaboration
             </span>
             <h2 className="mt-3 font-display text-3xl font-semibold text-ink sm:text-4xl">
               Discuss the work right where it happens.
             </h2>
-            <p className="mt-4 max-w-md text-ink/60">
+            <p className="mt-4 max-w-md text-ink/60 dark:text-ink/85">
               Comment on any task, and keep a running activity log of who
               did what — so nobody has to ask &quot;wait, what changed?&quot;
             </p>
@@ -252,12 +254,12 @@ export default function LandingPage() {
               <div className="h-7 w-7 shrink-0 rounded-full bg-brand" />
               <div>
                 <p className="text-sm font-medium text-ink">Sara Malik</p>
-                <p className="mt-0.5 text-sm text-ink/60">
+                <p className="mt-0.5 text-sm text-ink/60 dark:text-ink/85">
                   Mockup looks great — pushing to staging now.
                 </p>
               </div>
             </div>
-            <div className="mt-4 flex items-center gap-1.5 border-t border-ink/10 pt-3 text-xs text-ink/40">
+            <div className="mt-4 flex items-center gap-1.5 border-t border-ink/10 pt-3 text-xs text-ink/40 dark:text-ink/65">
               <span className="h-1.5 w-1.5 rounded-full bg-success" />
               Ali marked &quot;Fix login redirect bug&quot; as done · 2h ago
             </div>
@@ -269,7 +271,7 @@ export default function LandingPage() {
       <section className="border-t border-ink/10 bg-white py-24">
         <div className="mx-auto max-w-6xl px-6">
           <div className="mx-auto max-w-xl text-center">
-            <span className="font-body text-xs font-semibold uppercase tracking-[0.2em] text-brand">
+            <span className="font-body text-xs font-semibold uppercase tracking-[0.2em] text-brand dark:text-brand-light">
               How it works
             </span>
             <h2 className="mt-3 font-display text-3xl font-semibold text-ink sm:text-4xl">
@@ -283,7 +285,7 @@ export default function LandingPage() {
                   {i + 1}
                 </div>
                 <h3 className="font-display text-lg font-semibold text-ink">{step.title}</h3>
-                <p className="mt-1.5 text-sm text-ink/60">{step.body}</p>
+                <p className="mt-1.5 text-sm text-ink/60 dark:text-ink/85">{step.body}</p>
               </div>
             ))}
           </div>
@@ -308,16 +310,16 @@ export default function LandingPage() {
 
       {/* ---------- Footer ---------- */}
       <footer className="border-t border-ink/10 py-8">
-        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 text-sm text-ink/40 sm:flex-row">
+        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 text-sm text-ink/40 dark:text-ink/65 sm:flex-row">
           <div className="flex items-center gap-2">
             <span className="flex h-6 w-6 items-center justify-center rounded-md bg-ink text-white">
               <FlowMark className="h-3.5 w-3.5" />
             </span>
-            <span className="font-display font-medium text-ink/70">NATaskFlow</span>
+            <span className="font-display font-medium text-ink/70 dark:text-ink/85">NATaskFlow</span>
           </div>
           <div className="flex items-center gap-5">
-            <Link href="/login" className="hover:text-ink/70">Log in</Link>
-            <Link href="/register" className="hover:text-ink/70">Sign up</Link>
+            <Link href="/login" className="hover:text-ink/70 dark:hover:text-ink">Log in</Link>
+            <Link href="/register" className="hover:text-ink/70 dark:hover:text-ink">Sign up</Link>
           </div>
           <p>© {new Date().getFullYear()} NATaskFlow. Built for teams that ship.</p>
         </div>
