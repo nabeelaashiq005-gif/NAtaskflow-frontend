@@ -12,7 +12,7 @@ import EmptyState from "@/components/ui/EmptyState";
 const projectStatusColors = {
   active: "bg-ink/10 text-ink",
   archived: "bg-ink/10 text-ink/60",
-  completed: "bg-green-100 text-green-700",
+  completed: "bg-success/10 text-success",
 };
 
 function ProjectRow({ project, workspaceId }) {
@@ -21,7 +21,7 @@ function ProjectRow({ project, workspaceId }) {
       href={`/workspaces/${workspaceId}/projects/${project._id}`}
       className="flex items-center gap-4 px-5 py-4 transition-colors hover:bg-ink/5"
     >
-      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-ink text-sm font-bold text-white">
+      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand text-sm font-bold text-white">
         {(project.name || "?")
           .trim()
           .split(/\s+/)
@@ -137,7 +137,7 @@ export default function WorkspaceHomePage() {
       <header className="mt-4">
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand">Workspace</p>
         <div className="mt-2 flex items-center gap-4">
-          <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-ink text-sm font-bold text-white">
+          <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-brand text-sm font-bold text-white">
             {workspaceInitials(workspace.name)}
           </span>
           <div>

@@ -8,13 +8,13 @@ export default function CompletionRing({ completed = 0, total = 0 }) {
     <div className="flex items-center gap-5 rounded-2xl border border-ink/10 bg-white p-5 sm:col-span-2">
       <div className="relative h-24 w-24 shrink-0">
         <svg viewBox="0 0 100 100" className="h-24 w-24 -rotate-90">
-          <circle cx="50" cy="50" r={radius} fill="none" stroke="#3341550D" strokeWidth="8" />
+          <circle cx="50" cy="50" r={radius} fill="none" stroke="rgb(var(--ink) / 0.08)" strokeWidth="8" />
           <circle
             cx="50"
             cy="50"
             r={radius}
             fill="none"
-            stroke="#3D5A80"
+            stroke="rgb(var(--brand))"
             strokeWidth="8"
             strokeLinecap="round"
             strokeDasharray={circumference}

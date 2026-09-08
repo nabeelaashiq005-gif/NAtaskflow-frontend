@@ -20,7 +20,7 @@ export default function MobileBottomNav({ pendingCount, unreadNotifications }) {
   ];
 
   return (
-    <nav className="fixed inset-x-0 bottom-0 z-20 border-t border-ink/10 bg-white/95 backdrop-blur pb-[env(safe-area-inset-bottom)] md:hidden">
+    <nav className="fixed inset-x-0 bottom-0 z-20 border-t border-ink/10 bg-white/95 backdrop-blur dark:border-white/10 dark:bg-slate-800/95 pb-[env(safe-area-inset-bottom)] md:hidden">
       <div className="flex items-stretch justify-between px-2">
         {items.map((item) => {
           const isActive = pathname.startsWith(item.href);

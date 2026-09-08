@@ -1,7 +1,7 @@
 const colorStyles = {
-  brand: "bg-brand-light/30 text-brand-dark",
-  green: "bg-green-100 text-green-700",
-  amber: "bg-amber-100 text-amber-700",
+  brand: "bg-brand-light/30 text-brand-dark dark:bg-brand/20 dark:text-brand-light",
+  green: "bg-success/10 text-success",
+  amber: "bg-warning/10 text-warning",
   red: "bg-accent/15 text-accent",
 };
 

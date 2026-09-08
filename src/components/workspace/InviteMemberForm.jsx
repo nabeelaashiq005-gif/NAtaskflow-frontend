@@ -58,7 +58,7 @@ export default function InviteMemberForm({ workspaceId, onInvited }) {
         <select
           id="inviteRole"
           {...register("role")}
-          className="rounded-lg border border-ink/15 px-3 py-2.5 text-sm"
+          className="rounded-lg border border-ink/15 bg-white px-3 py-2.5 text-sm text-ink"
         >
           <option value="admin">Admin</option>
           <option value="member">Member</option>

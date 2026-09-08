@@ -66,7 +66,7 @@ export default function Sidebar({ pendingCount, unreadNotifications }) {
   return (
     <aside className="fixed inset-y-0 left-0 z-20 hidden w-60 flex-col bg-ink text-white md:flex">
       <Link href="/" className="flex items-center gap-2.5 px-6 py-5">
-        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-white text-ink">
+        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-white text-ink dark:bg-white/10 dark:text-white">
           <FlowMark className="h-5 w-5" />
         </span>
         <span>

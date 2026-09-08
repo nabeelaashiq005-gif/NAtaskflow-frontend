@@ -24,7 +24,7 @@ export default function WorkspaceTabs({ workspaceId, canManage }) {
           href={tab.href}
           className={`whitespace-nowrap rounded-lg px-3.5 py-2 text-sm font-semibold transition-colors ${
             isActive(tab.href)
-              ? "bg-ink text-white shadow-sm"
+              ? "bg-accent text-white shadow-sm"
               : "text-ink/60 hover:bg-ink/5 hover:text-ink"
           }`}
         >

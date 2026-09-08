@@ -35,6 +35,11 @@
   background-color: rgb(30 41 59);
 }
 
+/* Toggle switch knob — must stay white in both themes */
+.toggle-knob {
+  background-color: #ffffff;
+}
+
 body {
   @apply bg-canvas text-ink font-body antialiased;
 }

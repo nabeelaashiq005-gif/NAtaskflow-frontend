@@ -11,7 +11,7 @@ import TaskBoard from "@/components/task/TaskBoard";
 const statusColors = {
   active: "bg-ink/10 text-ink",
   archived: "bg-ink/10 text-ink/60",
-  completed: "bg-green-100 text-green-700",
+  completed: "bg-success/10 text-success",
 };
 
 export default function ProjectDetailPage() {

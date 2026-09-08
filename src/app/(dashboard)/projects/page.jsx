@@ -35,13 +35,13 @@ function MemberStack({ members, projectId }) {
         <span
           key={`${projectId}-${member._id}`}
           title={member.name}
-          className={`flex h-6 w-6 items-center justify-center rounded-full text-[10px] font-bold ring-2 ring-white ${avatarColor(i, member.name)}`}
+          className={`flex h-6 w-6 items-center justify-center rounded-full text-[10px] font-bold ring-2 ring-white dark:ring-slate-800 ${avatarColor(i, member.name)}`}
         >
           {initials(member.name)}
         </span>
       ))}
       {rest > 0 && (
-        <span className="flex h-6 w-6 items-center justify-center rounded-full bg-ink/10 text-[10px] font-bold text-ink/70 ring-2 ring-white">
+        <span className="flex h-6 w-6 items-center justify-center rounded-full bg-ink/10 text-[10px] font-bold text-ink/70 ring-2 ring-white dark:ring-slate-800">
           +{rest}
         </span>
       )}
@@ -183,7 +183,7 @@ export default function ProjectsPage() {
                       <p className="mt-1 line-clamp-2 text-sm text-ink/60">{project.description}</p>
                     )}
 
-                    <div className="mt-4 flex items-center justify-between border-t border-ink/5 pt-3">
+                    <div className="mt-4 flex items-center justify-between border-t border-ink/10 pt-3">
                       <MemberStack members={project.members} projectId={project._id} />
                       <span className="text-xs font-medium text-ink/40">
                         {project.members?.length || 0} member{project.members?.length === 1 ? "" : "s"}

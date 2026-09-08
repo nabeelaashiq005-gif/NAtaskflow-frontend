@@ -13,7 +13,7 @@ const PasswordInput = forwardRef(function PasswordInput({ label, error, id, ...p
           id={id}
           ref={ref}
           type={isVisible ? "text" : "password"}
-          className={`w-full rounded-lg border px-3.5 py-2.5 pr-10 outline-none transition-colors focus:border-brand ${
+          className={`w-full rounded-lg border bg-white px-3.5 py-2.5 pr-10 text-ink placeholder:text-ink/40 outline-none transition-colors focus:border-brand ${
             error ? "border-accent" : "border-ink/15"
           }`}
           {...props}

@@ -167,10 +167,10 @@ export default function OnboardingDashboard() {
             className="group rounded-2xl border border-ink/10 bg-white p-6 transition-all hover:-translate-y-0.5 hover:border-brand/30 hover:shadow-md"
           >
             <div className="flex items-center justify-between">
-              <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-light/25 text-brand-dark">
+              <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand text-white">
                 <step.icon className="h-5 w-5" />
               </span>
-              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-ink font-display text-xs font-semibold text-white">
+              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-accent font-display text-xs font-semibold text-white">
                 {index + 1}
               </span>
             </div>
@@ -192,7 +192,7 @@ export default function OnboardingDashboard() {
       <div className="mt-3 grid grid-cols-1 gap-4 md:grid-cols-3">
         {features.map((feature) => (
           <div key={feature.title} className="rounded-2xl border border-ink/10 bg-white p-6">
-            <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-ink text-white">
+            <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand text-white">
               <feature.icon className="h-5 w-5" />
             </span>
             <h3 className="mt-3 font-display text-base font-semibold text-ink">{feature.title}</h3>

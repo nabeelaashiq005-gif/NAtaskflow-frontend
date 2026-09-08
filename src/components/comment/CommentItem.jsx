@@ -64,7 +64,7 @@ export default function CommentItem({ comment, currentUserId, canManageAny, onUp
               value={content}
               onChange={(e) => setContent(e.target.value)}
               rows={2}
-              className="w-full rounded-lg border border-ink/15 px-3 py-2 text-sm outline-none focus:border-brand"
+              className="w-full rounded-lg border border-ink/15 bg-white px-3 py-2 text-sm text-ink outline-none focus:border-brand"
             />
             <div className="mt-1.5 flex gap-3 text-xs">
               <button

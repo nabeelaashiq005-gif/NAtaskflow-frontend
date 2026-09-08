@@ -10,7 +10,7 @@ import EmptyState from "@/components/ui/EmptyState";
 
 function WorkspaceRow({ workspace }) {
   const roleColors = {
-    owner: "bg-ink text-white",
+    owner: "bg-accent text-white",
     admin: "bg-ink/10 text-ink",
     member: "bg-ink/10 text-ink/70",
     viewer: "bg-ink/5 text-ink/50",
@@ -20,7 +20,7 @@ function WorkspaceRow({ workspace }) {
       href={`/workspaces/${workspace._id}`}
       className="flex items-center gap-4 px-5 py-4 transition-colors hover:bg-ink/5"
     >
-      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-ink text-sm font-bold text-white">
+      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand text-sm font-bold text-white">
         {(workspace.name || "?")
           .trim()
           .split(/\s+/)

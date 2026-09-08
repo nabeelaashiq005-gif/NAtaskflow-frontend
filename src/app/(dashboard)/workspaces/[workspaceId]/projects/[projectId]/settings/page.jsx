@@ -154,7 +154,7 @@ export default function ProjectSettingsPage() {
             <select
               id="projectStatus"
               {...register("status")}
-              className="w-full rounded-lg border border-ink/15 px-3.5 py-2.5 text-sm"
+              className="w-full rounded-lg border border-ink/15 bg-white px-3.5 py-2.5 text-sm text-ink"
             >
               <option value="active">Active</option>
               <option value="archived">Archived</option>

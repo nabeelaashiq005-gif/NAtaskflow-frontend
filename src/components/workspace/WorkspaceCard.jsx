@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const roleColors = {
-  owner: "bg-ink text-white",
+  owner: "bg-accent text-white dark:bg-accent dark:text-white",
   admin: "bg-ink/10 text-ink",
   member: "bg-ink/10 text-ink/70",
   viewer: "bg-ink/5 text-ink/50",

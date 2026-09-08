@@ -351,7 +351,7 @@ export default function TaskDetailPage() {
                 <select
                   id="editTaskStatus"
                   {...register("status")}
-                  className="w-full rounded-lg border border-ink/15 px-3 py-2.5 text-sm"
+                  className="w-full rounded-lg border border-ink/15 bg-white px-3 py-2.5 text-sm text-ink"
                 >
                   <option value="todo">To Do</option>
                   <option value="in_progress">In Progress</option>
@@ -368,7 +368,7 @@ export default function TaskDetailPage() {
                 <select
                   id="editTaskPriority"
                   {...register("priority")}
-                  className="w-full rounded-lg border border-ink/15 px-3 py-2.5 text-sm"
+                  className="w-full rounded-lg border border-ink/15 bg-white px-3 py-2.5 text-sm text-ink"
                 >
                   <option value="low">Low</option>
                   <option value="medium">Medium</option>

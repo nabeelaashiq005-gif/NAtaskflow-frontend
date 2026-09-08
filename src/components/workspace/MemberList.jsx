@@ -38,7 +38,7 @@ export default function MemberList({ members, myRole, currentUserId, onRemove, o
                 <select
                   value={m.role}
                   onChange={(e) => onRoleChange(m.user._id, e.target.value)}
-                  className="rounded-lg border border-ink/15 px-2 py-1 text-sm capitalize"
+                  className="rounded-lg border border-ink/15 bg-white px-2 py-1 text-sm text-ink capitalize"
                 >
                   {roleOptions.map((role) => (
                     <option key={role} value={role}>
