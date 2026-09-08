@@ -281,7 +281,7 @@ export default function LandingPage() {
           <div className="mt-14 grid grid-cols-1 gap-10 sm:grid-cols-3">
             {steps.map((step, i) => (
               <div key={step.title} className="relative pl-12 sm:pl-0 sm:text-center">
-                <div className="absolute left-0 top-0 flex h-9 w-9 items-center justify-center rounded-full bg-ink font-display text-sm font-semibold text-white sm:static sm:mx-auto sm:mb-4">
+                <div className="absolute left-0 top-0 flex h-9 w-9 items-center justify-center rounded-full bg-accent font-display text-sm font-semibold text-white sm:static sm:mx-auto sm:mb-4">
                   {i + 1}
                 </div>
                 <h3 className="font-display text-lg font-semibold text-ink">{step.title}</h3>
@@ -310,9 +310,9 @@ export default function LandingPage() {
 
       {/* ---------- Footer ---------- */}
       <footer className="border-t border-ink/10 py-8">
-        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 text-sm text-ink/40 dark:text-ink/65 sm:flex-row">
+        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 text-sm text-ink/40 dark:text-ink/75 sm:flex-row">
           <div className="flex items-center gap-2">
-            <span className="flex h-6 w-6 items-center justify-center rounded-md bg-ink text-white">
+            <span className="flex h-6 w-6 items-center justify-center rounded-md bg-brand text-white">
               <FlowMark className="h-3.5 w-3.5" />
             </span>
             <span className="font-display font-medium text-ink/70 dark:text-ink/85">NATaskFlow</span>

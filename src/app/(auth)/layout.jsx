@@ -34,7 +34,7 @@ export default function AuthLayout({ children }) {
 
         <div className="mx-auto mt-6 w-full max-w-md">
           <Link href="/" className="mb-10 flex items-center justify-center gap-2.5 lg:hidden">
-            <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-ink text-white">
+            <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-brand text-white">
               <FlowMark className="h-5 w-5" />
             </span>
             <span className="font-display text-lg font-semibold text-ink">NATaskFlow</span>
