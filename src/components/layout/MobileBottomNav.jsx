@@ -35,12 +35,12 @@ export default function MobileBottomNav({ pendingCount, unreadNotifications }) {
                 className={`flex h-8 w-8 items-center justify-center rounded-full transition-colors ${
                   isActive
                     ? "bg-accent text-white"
-                    : "text-ink/40"
+                    : "text-ink/40 dark:text-ink/60"
                 }`}
               >
                 <Icon className="h-[18px] w-[18px]" />
               </span>
-              <span className={`text-[10px] font-medium ${isActive ? "text-ink" : "text-ink/40"}`}>
+              <span className={`text-[10px] font-medium ${isActive ? "text-ink" : "text-ink/40 dark:text-ink/60"}`}>
                 {item.label}
               </span>
               {item.badge > 0 && (

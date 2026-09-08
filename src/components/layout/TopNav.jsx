@@ -19,7 +19,7 @@ export default function TopNav({ unreadNotifications }) {
           <NotificationDropdown unreadNotifications={unreadNotifications} />
           <Link
             href="/settings"
-            className="flex h-10 w-10 items-center justify-center rounded-full text-ink/50 transition-colors hover:bg-ink/5 hover:text-ink"
+            className="flex h-10 w-10 items-center justify-center rounded-full text-ink/50 transition-colors hover:bg-ink/5 hover:text-ink dark:text-ink/75"
           >
             <SettingsIcon className="h-5 w-5" />
           </Link>

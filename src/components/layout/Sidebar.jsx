@@ -24,12 +24,12 @@ function NavItem({ href, label, icon: Icon, isActive, badge }) {
       className={`group flex items-center gap-3 rounded-xl px-3.5 py-2.5 text-sm font-medium transition-colors ${
         isActive
           ? "bg-accent text-white"
-          : "text-white/60 hover:bg-white/5 hover:text-white"
+          : "text-white/75 hover:bg-white/5 hover:text-white"
       }`}
     >
       <Icon
         className={`h-[18px] w-[18px] shrink-0 ${
-          isActive ? "text-white" : "text-white/40 group-hover:text-white/80"
+          isActive ? "text-white" : "text-white/55 group-hover:text-white/80"
         }`}
       />
       <span className="flex-1">{label}</span>
@@ -73,7 +73,7 @@ export default function Sidebar({ pendingCount, unreadNotifications }) {
           <span className="block font-display text-base font-semibold leading-tight">
             NATaskFlow
           </span>
-          <span className="block text-xs leading-tight text-white/40">Smart collaboration</span>
+          <span className="block text-xs leading-tight text-white/50">Smart collaboration</span>
         </span>
       </Link>
 
@@ -89,9 +89,9 @@ export default function Sidebar({ pendingCount, unreadNotifications }) {
         ))}
         <button
           onClick={logout}
-          className="flex w-full items-center gap-3 rounded-xl px-3.5 py-2.5 text-sm font-medium text-white/60 transition-colors hover:bg-white/5 hover:text-white"
+          className="flex w-full items-center gap-3 rounded-xl px-3.5 py-2.5 text-sm font-medium text-white/75 transition-colors hover:bg-white/5 hover:text-white"
         >
-          <LogoutIcon className="h-[18px] w-[18px] text-white/40" />
+          <LogoutIcon className="h-[18px] w-[18px] text-white/55" />
           Log out
         </button>
       </div>

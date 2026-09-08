@@ -69,7 +69,7 @@ export default function LandingPage() {
       <header className="bg-ink">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-4 sm:px-6">
           <Link href="/" className="flex min-w-0 items-center gap-2.5">
-            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white text-ink">
+            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white text-ink dark:bg-white/10 dark:text-white">
               <FlowMark className="h-4.5 w-4.5" />
             </span>
             <span className="hidden truncate font-display text-lg font-semibold text-white min-[420px]:inline">
@@ -80,7 +80,7 @@ export default function LandingPage() {
             <ThemeToggle inverse />
             <Link
               href="/login"
-              className="text-sm font-medium text-white/60 hover:text-white"
+              className="text-sm font-medium text-white/60 hover:text-white dark:text-white/80"
             >
               Log in
             </Link>

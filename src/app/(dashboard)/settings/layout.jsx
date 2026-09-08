@@ -43,7 +43,7 @@ export default function SettingsLayout({ children }) {
               className={`flex items-center gap-2.5 whitespace-nowrap rounded-xl px-4 py-2.5 text-sm font-semibold transition-colors ${
                 isActive
                   ? "bg-accent text-white shadow-sm"
-                  : "text-ink/60 hover:bg-ink/5 hover:text-ink"
+                  : "text-ink/60 hover:bg-ink/5 hover:text-ink dark:text-ink/75"
               }`}
             >
               <Icon className="h-4 w-4 shrink-0" />

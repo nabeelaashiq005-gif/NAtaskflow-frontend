@@ -124,7 +124,7 @@ export default function NotificationDropdown({ unreadNotifications }) {
         onClick={toggle}
         aria-label="Notifications"
         className={`relative flex h-10 w-10 items-center justify-center rounded-full transition-colors hover:bg-ink/5 ${
-          isOpen ? "text-ink" : "text-ink/50 hover:text-ink"
+          isOpen ? "text-ink" : "text-ink/50 hover:text-ink dark:text-ink/75"
         }`}
       >
         <NotificationsIcon className="h-5 w-5" />
