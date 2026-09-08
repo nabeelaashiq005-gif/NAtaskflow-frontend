@@ -12,8 +12,8 @@ export default function Button({
     fullWidth ? "w-full" : ""
   }`;
   const variants = {
-    primary: "bg-brand text-white hover:opacity-90",
-    accent: "bg-brand text-white hover:opacity-90",
+    primary: "bg-accent text-white hover:opacity-90",
+    accent: "bg-accent text-white hover:opacity-90",
     ghost: "bg-transparent text-ink/70 hover:bg-ink/5 hover:text-ink",
   };
 

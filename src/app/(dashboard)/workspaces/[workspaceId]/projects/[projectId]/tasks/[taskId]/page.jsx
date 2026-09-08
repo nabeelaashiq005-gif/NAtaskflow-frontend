@@ -104,7 +104,7 @@ function SubmissionSection({ task, currentUserId, onSubmissionUploaded }) {
           />
           <label
             htmlFor={`submission-input-${task._id}`}
-            className="inline-block cursor-pointer rounded-lg bg-brand px-4 py-2 text-sm font-medium text-white transition-opacity hover:opacity-90"
+            className="inline-block cursor-pointer rounded-lg bg-accent px-4 py-2 text-sm font-medium text-white transition-opacity hover:opacity-90"
           >
             {isUploading
               ? "Uploading..."
@@ -390,7 +390,7 @@ export default function TaskDetailPage() {
                         onClick={() => toggleAssignee(member._id)}
                         className={`rounded-full border px-3 py-1 text-xs font-medium ${
                           selectedAssignees.includes(member._id)
-                            ? "border-brand bg-brand text-white"
+                            ? "border-brand bg-accent text-white"
                             : "border-ink/15 text-ink/60 hover:bg-ink/5"
                         }`}
                       >
@@ -405,7 +405,7 @@ export default function TaskDetailPage() {
                         onClick={() => toggleAssignee(member._id)}
                         className={`rounded-full border px-3 py-1 text-xs font-medium ${
                           selectedAssignees.includes(member._id)
-                            ? "border-brand bg-brand text-white"
+                            ? "border-brand bg-accent text-white"
                             : "border-ink/15 text-ink/60 hover:bg-ink/5"
                         }`}
                       >

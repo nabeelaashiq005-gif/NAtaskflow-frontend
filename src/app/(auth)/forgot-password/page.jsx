@@ -52,7 +52,7 @@ export default function ForgotPasswordPage() {
         </div>
         <Link
           href={`/reset-password?email=${encodeURIComponent(email)}`}
-          className="block rounded-lg bg-brand px-6 py-3 text-center text-sm font-medium text-white transition-opacity hover:opacity-90"
+          className="block rounded-lg bg-accent px-6 py-3 text-center text-sm font-medium text-white transition-opacity hover:opacity-90"
         >
           I have a code — set a new password
         </Link>

@@ -140,7 +140,7 @@ export default function NewTaskPage() {
                   onClick={() => toggleAssignee(member._id)}
                   className={`rounded-full border px-3 py-1 text-xs font-medium ${
                     selectedAssignees.includes(member._id)
-                      ? "border-brand bg-brand text-white"
+                      ? "border-brand bg-accent text-white"
                       : "border-ink/15 text-ink/60 hover:bg-ink/5"
                   }`}
                 >

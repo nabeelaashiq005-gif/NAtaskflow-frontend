@@ -108,7 +108,7 @@ export default function OnboardingDashboard() {
         <div className="relative mt-8 flex flex-wrap items-center gap-3">
           <Link
             href="/workspaces"
-            className="inline-flex items-center gap-2 rounded-lg bg-brand px-5 py-3 text-sm font-semibold text-white shadow-sm transition-opacity hover:opacity-90"
+            className="inline-flex items-center gap-2 rounded-lg bg-accent px-5 py-3 text-sm font-semibold text-white shadow-sm transition-opacity hover:opacity-90"
           >
             <RocketIcon className="h-4 w-4" />
             Create your first workspace
