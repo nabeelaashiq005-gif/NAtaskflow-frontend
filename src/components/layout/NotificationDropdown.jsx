@@ -62,7 +62,12 @@ export default function NotificationDropdown({ unreadNotifications }) {
   const boxRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
   const [notifications, setNotifications] = useState([]);
+  const [localUnread, setLocalUnread] = useState(unreadNotifications);
   const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    setLocalUnread(unreadNotifications);
+  }, [unreadNotifications]);
 
   useEffect(() => {
     function handleClickOutside(event) {
@@ -79,6 +84,7 @@ export default function NotificationDropdown({ unreadNotifications }) {
     try {
       const { data } = await api.get("/notifications");
       setNotifications(data.data.notifications);
+      setLocalUnread(data.data.unreadCount ?? notifications.filter((n) => !n.isRead).length);
     } catch {
       // silently ignore — dropdown just won't list anything
     } finally {
@@ -98,6 +104,7 @@ export default function NotificationDropdown({ unreadNotifications }) {
     if (!notification.isRead) {
       try {
         await api.patch(`/notifications/${notification._id}/read`);
+        setLocalUnread((c) => Math.max(0, (c || 0) - 1));
       } catch {
         // non-critical — still navigate even if marking-as-read fails
       }
@@ -111,6 +118,7 @@ export default function NotificationDropdown({ unreadNotifications }) {
     try {
       await api.patch("/notifications/read-all");
       setNotifications((prev) => prev.map((n) => ({ ...n, isRead: true })));
+      setLocalUnread(0);
     } catch {
       // silently ignore
     }
@@ -128,15 +136,15 @@ export default function NotificationDropdown({ unreadNotifications }) {
         }`}
       >
         <NotificationsIcon className="h-5 w-5" />
-        {unreadNotifications > 0 && (
-          <span className="absolute right-1.5 top-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-accent text-[9px] font-semibold text-white">
-            {unreadNotifications > 9 ? "9+" : unreadNotifications}
+        {localUnread > 0 && (
+          <span className="absolute right-1.5 top-1.5 flex h-4 w-4 min-w-4 items-center justify-center rounded-full bg-accent px-1 text-[9px] font-semibold text-white">
+            {localUnread > 9 ? "9+" : localUnread}
           </span>
         )}
       </button>
 
       {isOpen && (
-        <div className="fixed inset-x-4 top-16 z-50 max-h-[calc(100dvh-5rem)] overflow-y-auto rounded-2xl border border-ink/10 bg-white shadow-2xl shadow-ink/10 sm:absolute sm:inset-x-auto sm:right-0 sm:top-12 sm:max-h-none sm:w-96 sm:overflow-hidden">
+        <div className="fixed inset-x-4 top-16 z-[60] max-h-[calc(100dvh-5rem)] overflow-y-auto rounded-2xl border border-ink/10 bg-white shadow-2xl shadow-ink/10 sm:absolute sm:inset-x-auto sm:right-0 sm:top-12 sm:max-h-none sm:w-96 sm:overflow-hidden">
           <div className="flex items-center justify-between border-b border-ink/10 px-4 py-3">
             <div className="flex items-center gap-2 text-sm font-semibold text-ink">
               <PenIcon className="h-4 w-4 text-ink/50" />
@@ -145,7 +153,7 @@ export default function NotificationDropdown({ unreadNotifications }) {
             <button
               onClick={handleMarkAllRead}
               disabled={!hasUnread}
-              className="rounded-lg px-2.5 py-1 text-xs font-medium text-accent transition-colors hover:bg-accent/10 disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:bg-transparent"
+              className="rounded-lg px-2.5 py-1 text-xs font-semibold text-accent transition-colors hover:bg-accent/10 disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:bg-transparent"
             >
               Mark all as read
             </button>
