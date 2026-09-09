@@ -92,6 +92,15 @@ export default function TopNav({ pendingCount = 0, unreadNotifications }) {
     setIsOpen(false);
   }, [pathname]);
 
+  useEffect(() => {
+    if (!isOpen) return;
+    const original = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = original;
+    };
+  }, [isOpen]);
+
   return (
     <>
       <header className="fixed inset-x-0 top-0 z-30 h-16 border-b border-ink/10 bg-white md:left-60">

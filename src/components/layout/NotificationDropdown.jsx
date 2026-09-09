@@ -136,7 +136,7 @@ export default function NotificationDropdown({ unreadNotifications }) {
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 top-12 z-50 w-80 overflow-hidden rounded-2xl border border-ink/10 bg-white shadow-2xl shadow-ink/10 sm:w-96">
+        <div className="absolute left-4 right-4 top-16 z-50 overflow-hidden rounded-2xl border border-ink/10 bg-white shadow-2xl shadow-ink/10 sm:left-auto sm:right-0 sm:top-12 sm:w-96">
           <div className="flex items-center justify-between border-b border-ink/10 px-4 py-3">
             <div className="flex items-center gap-2 text-sm font-semibold text-ink">
               <PenIcon className="h-4 w-4 text-ink/50" />
