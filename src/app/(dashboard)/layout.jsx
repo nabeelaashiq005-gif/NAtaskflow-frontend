@@ -56,8 +56,8 @@ export default function DashboardLayout({ children }) {
   return (
     <div className="min-h-screen bg-canvas">
       <Sidebar pendingCount={pendingCount} unreadNotifications={unreadNotifications} />
-      <TopNav unreadNotifications={unreadNotifications} />
-      <main key={pathname} className="page-enter pb-20 md:pb-12 md:pl-60 md:pt-16">
+      <TopNav pendingCount={pendingCount} unreadNotifications={unreadNotifications} />
+      <main key={pathname} className="page-enter pt-16 pb-20 md:pb-12 md:pl-60 md:pt-16">
         {children}
       </main>
       <MobileBottomNav pendingCount={pendingCount} unreadNotifications={unreadNotifications} />
