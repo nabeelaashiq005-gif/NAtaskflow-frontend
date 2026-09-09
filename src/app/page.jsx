@@ -156,7 +156,7 @@ export default function LandingPage() {
         <div className="mx-auto grid max-w-6xl grid-cols-2 gap-x-6 gap-y-5 px-6 py-8 sm:grid-cols-4">
           {valueProps.map(({ icon: Icon, label }) => (
             <div key={label} className="flex items-center gap-2.5">
-              <Icon className="h-5 w-5 shrink-0 text-brand dark:text-brand-light" />
+              <Icon className="h-5 w-5 shrink-0 text-brand dark:text-brand-dark" />
               <span className="text-sm font-medium text-ink/70 dark:text-ink/85">{label}</span>
             </div>
           ))}
@@ -167,7 +167,7 @@ export default function LandingPage() {
       <section className="mx-auto max-w-6xl px-6 py-24">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
           <div>
-            <span className="font-body text-xs font-semibold uppercase tracking-[0.2em] text-brand dark:text-brand-light">
+            <span className="font-body text-xs font-semibold uppercase tracking-[0.2em] text-brand dark:text-brand-dark">
               Workspaces
             </span>
             <h2 className="mt-3 font-display text-3xl font-semibold text-ink sm:text-4xl">
@@ -218,7 +218,7 @@ export default function LandingPage() {
               ))}
             </div>
             <div className="order-1 lg:order-2">
-              <span className="font-body text-xs font-semibold uppercase tracking-[0.2em] text-brand dark:text-brand-light">
+              <span className="font-body text-xs font-semibold uppercase tracking-[0.2em] text-brand dark:text-brand-dark">
                 Task management
               </span>
               <h2 className="mt-3 font-display text-3xl font-semibold text-ink sm:text-4xl">
@@ -238,7 +238,7 @@ export default function LandingPage() {
       <section className="mx-auto max-w-6xl px-6 py-24">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
           <div>
-            <span className="font-body text-xs font-semibold uppercase tracking-[0.2em] text-brand dark:text-brand-light">
+            <span className="font-body text-xs font-semibold uppercase tracking-[0.2em] text-brand dark:text-brand-dark">
               Collaboration
             </span>
             <h2 className="mt-3 font-display text-3xl font-semibold text-ink sm:text-4xl">
@@ -271,7 +271,7 @@ export default function LandingPage() {
       <section className="border-t border-ink/10 bg-white py-24">
         <div className="mx-auto max-w-6xl px-6">
           <div className="mx-auto max-w-xl text-center">
-            <span className="font-body text-xs font-semibold uppercase tracking-[0.2em] text-brand dark:text-brand-light">
+            <span className="font-body text-xs font-semibold uppercase tracking-[0.2em] text-brand dark:text-brand-dark">
               How it works
             </span>
             <h2 className="mt-3 font-display text-3xl font-semibold text-ink sm:text-4xl">

@@ -1,5 +1,5 @@
 const colorStyles = {
-  brand: "bg-brand-light/30 text-brand-dark dark:bg-brand/20 dark:text-brand-light",
+  brand: "bg-brand-light/30 text-brand-dark dark:bg-brand/20 dark:text-brand-dark",
   green: "bg-success/10 text-success",
   amber: "bg-warning/10 text-warning",
   red: "bg-accent/15 text-accent",
